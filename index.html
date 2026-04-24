@@ -1,106 +1,137 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vasco Gabriel</title>
-    <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 1.6; color: #333; }
-        header { background: #2c3e50; color: white; padding: 40px 20px; text-align: center; }
-        header h1 { font-size: 2.5em; margin-bottom: 10px; }
-        header p { font-size: 1.2em; opacity: 0.95; }
-        nav { background: #34495e; padding: 0; }
-        nav a { color: white; padding: 15px 20px; display: inline-block; text-decoration: none; }
-        nav a:hover { background: #2c3e50; }
-        .container { max-width: 900px; margin: 0 auto; padding: 40px 20px; }
-        section { margin-bottom: 50px; }
-        section h2 { color: #2c3e50; margin-bottom: 20px; border-bottom: 2px solid #3498db; padding-bottom: 10px; }
-        a { color: #3498db; text-decoration: none; }
-        a:hover { text-decoration: underline; }
-        footer { background: #2c3e50; color: white; text-align: center; padding: 20px; margin-top: 50px; }
-        .contact-list { list-style: none; display: flex; flex-wrap: wrap; gap: 12px; padding: 0; }
-        .contact-list li { display: flex; align-items: center; }
-        .social a { display: inline-flex; align-items: center; gap: 8px; color: #2c3e50; text-decoration: none; }
-        .icon { width: 20px; height: 20px; display: inline-block; vertical-align: middle; }
-        .icon svg { width: 100%; height: 100%; fill: currentColor; }
-    </style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Vasco Gabriel</title>
+  <style>
+    :root{
+      --bg:#f6f7f9;
+      --card:#ffffff;
+      --muted:#6b7280;
+      --accent:#6ea8ff; /* softer blue */
+      --text:#111827;
+      --icon-size:40px;
+    }
+    *{box-sizing:border-box}
+    body{font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; background:var(--bg); color:var(--text); line-height:1.5; margin:0}
+    .wrap{max-width:880px;margin:48px auto;padding:24px}
+    .card{background:var(--card);border-radius:12px;padding:36px;box-shadow:0 6px 24px rgba(16,24,40,0.06)}
+    header{display:flex;flex-direction:column;align-items:center;text-align:center;margin-bottom:24px}
+    header h1{font-size:2.25rem;margin:0 0 6px;font-weight:600}
+    header p{margin:0;color:var(--muted);font-size:1rem}
+    nav{display:flex;gap:14px;justify-content:center;margin-bottom:22px}
+    nav a{color:var(--muted);text-decoration:none;padding:8px 12px;border-radius:8px}
+    nav a:hover{background:rgba(110,168,255,0.08);color:var(--text)}
+    .content{display:grid;grid-template-columns:1fr;gap:28px}
+    section h2{font-size:1.125rem;margin-bottom:12px;color:#0f172a}
+    section p{color:var(--muted);margin-bottom:12px}
+    ul{color:var(--muted);margin-left:20px}
+    /* contact / social */
+    .contact-row{display:flex;align-items:center;gap:18px;flex-wrap:wrap}
+    .email{color:var(--text);font-weight:500}
+    .social{display:flex;gap:12px;align-items:center;flex-wrap:wrap}
+    .social a{display:inline-flex;align-items:center;justify-content:center;width:var(--icon-size);height:var(--icon-size);border-radius:10px;text-decoration:none;color:white}
+    .social a span.vis{position:absolute;left:-9999px}
+    /* branded colours */
+    .s-scholar{background:#f4b400;color:#fff} /* Google yellow */
+    .s-repec{background:#f47c20;color:#fff} /* orange */
+    .s-orcid{background:#a6ce39;color:#fff} /* ORCID green */
+    .s-bsky{background:#0fb0f6;color:#fff} /* Bluesky cyan */
+    .s-linkedin{background:#0a66c2;color:#fff} /* LinkedIn blue */
+    .s-github{background:#0f172a;color:#fff} /* dark */
+    .icon svg{width:20px;height:20px;display:block}
+    /* smaller screens */
+    @media (max-width:520px){.wrap{margin:20px;padding:16px}.card{padding:20px}.social a{width:36px;height:36px;border-radius:8px}}
+    /* subtle footer */
+    footer{margin-top:28px;text-align:center;color:var(--muted);font-size:0.95rem}
+  </style>
 </head>
 <body>
-    <header>
+  <div class="wrap">
+    <div class="card">
+      <header>
         <h1>Vasco Gabriel</h1>
         <p>Professor of Economics</p>
-    </header>
+      </header>
 
-    <nav>
+      <nav>
         <a href="#about">About</a>
         <a href="#research">Research</a>
         <a href="#contact">Contact</a>
-    </nav>
+      </nav>
 
-    <div class="container">
+      <div class="content">
         <section id="about">
-            <h2>About Me</h2>
-            <p>I joined the Department of Economics at the University of Victoria, Canada, in 2021 as Professor and Department Chair. I am also a Visiting Researcher at the Department of Financial Stability, Bank of Portugal and a Researcher at the Centre for Research in Economics and Management - NIPE, University of Minho.</p>
+          <h2>About Me</h2>
+          <p>I joined the Department of Economics at the University of Victoria, Canada, in 2021 as Professor and Department Chair. I am also a Visiting Researcher at the Department of Financial Stability, Bank of Portugal and a Researcher at the Centre for Research in Economics and Management - NIPE, University of Minho.</p>
 
-            <p>I graduated in Economics from ISEG, Lisbon School of Economics &amp; Management, University of Lisbon in 1995, where I was awarded the ICEP prize.</p>
+          <p>I graduated in Economics from ISEG, Lisbon School of Economics &amp; Management, University of Lisbon in 1995, where I was awarded the ICEP prize.</p>
 
-            <p>I received a masters degree in Applied Maths (Econometrics) in 1998 from the same institution. In 2002, I completed a PhD in Economics at Birkbeck College, University of London.</p>
+          <p>I received a masters degree in Applied Maths (Econometrics) in 1998 from the same institution. In 2002, I completed a PhD in Economics at Birkbeck College, University of London.</p>
 
-            <p>I taught at the University of Minho, Portugal, before joining the University of Surrey in 2004, where I have been Head of School, Director of Learning and Teaching, Director of Postgraduate Studies at Surrey, and co-founded CIMS, the Centre for International Macroeconomic Studies.</p>
+          <p>I taught at the University of Minho, Portugal, before joining the University of Surrey in 2004, where I have been Head of School, Director of Learning and Teaching, Director of Postgraduate Studies at Surrey, and co-founded CIMS, the Centre for International Macroeconomic Studies.</p>
         </section>
 
         <section id="research">
-            <h2>Research</h2>
-            <p>Describe your research here. You can add:</p>
-            <ul>
-                <li>Current projects</li>
-                <li>Publications</li>
-                <li>Research interests</li>
-            </ul>
+          <h2>Research</h2>
+          <p>Describe your research here. You can add:</p>
+          <ul>
+            <li>Current projects</li>
+            <li>Publications</li>
+            <li>Research interests</li>
+          </ul>
         </section>
 
         <section id="contact">
-            <h2>Contact</h2>
-            <ul class="contact-list">
-                <li>Email: <a href="mailto:vgabriel@uvic.ca">vgabriel@uvic.ca</a></li>
-            </ul>
-
-            <div class="social" aria-label="Social links" role="navigation">
-                <a href="https://scholar.google.com/citations?user=bM8p3qkAAAAJ&hl=en" title="Google Scholar" target="_blank" rel="noopener noreferrer">
-                    <span class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 17.93c-2.83.48-5.46-.5-7.22-2.59l2.34-1.9c1.2 1.23 2.95 2.01 4.88 2.01 1.58 0 3.03-.49 4.23-1.32l2.34 1.9c-1.88 1.85-4.45 2.9-7.57 2.9V19.93zM18.6 16c-.66-.99-1.99-1.67-3.6-1.67-1.61 0-2.94.68-3.6 1.67-.66-.99-1.99-1.67-3.6-1.67-1.61 0-2.94.68-3.6 1.67V9.9c.66.99 1.99 1.67 3.6 1.67 1.61 0 2.94-.68 3.6-1.67.66.99 1.99 1.67 3.6 1.67 1.61 0 2.94-.68 3.6-1.67V16z"/></svg></span>
-                    <span>Google Scholar</span>
-                </a>
-                <a href="https://ideas.repec.org/f/pga290.html#articles" title="Ideas/RePEc" target="_blank" rel="noopener noreferrer">
-                    <span class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2L2 12h3v8h14v-8h3L12 2zM11 14H8v-2h3v2zm5 0h-3v-2h3v2zM11 11H8V9h3v2zm5 0h-3V9h3v2z"/></svg></span>
-                    <span>Ideas / RePEc</span>
-                </a>
-                <a href="https://orcid.org/my-orcid?orcid=0000-0001-8659-8661" title="ORCID" target="_blank" rel="noopener noreferrer">
-                    <span class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2a10 10 0 100 20 10 10 0 000-20zm0 3a7 7 0 110 14 7 7 0 010-14zm0 2.5a4.5 4.5 0 100 9 4.5 4.5 0 000-9z"/></svg></span>
-                    <span>ORCID</span>
-                </a>
-                <a href="https://bsky.app/profile/vascojgabriel.bsky.social" title="Bluesky" target="_blank" rel="noopener noreferrer">
-                    <span class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2C6.48 2 2 6.48 2 12c0 4.41 2.87 8.16 6.84 9.5.5.09.68-.22.68-.48 0-.24-.01-.87-.01-1.71-2.78.61-3.37-1.34-3.37-1.34-.45-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.61.07-.61 1.01.07 1.55 1.04 1.55 1.04.9 1.54 2.36 1.1 2.94.84.09-.66.35-1.1.63-1.35-2.22-.25-4.56-1.11-4.56-4.95 0-1.09.39-1.98 1.04-2.68-.1-.26-.45-1.29.1-2.68 0 0 .84-.27 2.75 1.02A9.56 9.56 0 0112 6.8c.85.004 1.7.115 2.49.337 1.9-1.29 2.74-1.02 2.74-1.02.56 1.39.21 2.42.11 2.68.65.7 1.03 1.59 1.03 2.68 0 3.85-2.35 4.69-4.59 4.95.36.31.68.92.68 1.86 0 1.34-.01 2.42-.01 2.75 0 .26.18.58.69.48A10 10 0 0022 12c0-5.52-4.48-10-10-10z"/></svg></span>
-                    <span>Bluesky</span>
-                </a>
-                <a href="https://www.linkedin.com/in/vasco-j-gabriel-740683b3/" title="LinkedIn" target="_blank" rel="noopener noreferrer">
-                    <span class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 3A2 2 0 0121 5v14a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h14zM8.34 17.34V10.66H6.09v6.68h2.25zM7.22 9.5a1.3 1.3 0 110-2.6 1.3 1.3 0 010 2.6zM18 17.34v-3.43c0-1.84-1.03-2.7-2.41-2.7-1.11 0-1.6.62-1.88 1.06v-0.91H11.4c.03.61 0 6.68 0 6.68h2.25v-3.73c0-.2.01-.41.08-.56.17-.41.56-.84 1.21-.84.85 0 1.19.63 1.19 1.57v3.56H18z"/></svg></span>
-                    <span>LinkedIn</span>
-                </a>
-                <a href="https://github.com/vascojgabriel" title="GitHub" target="_blank" rel="noopener noreferrer">
-                    <span class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 .5C5.73.5.5 5.73.5 12c0 5.08 3.29 9.39 7.86 10.92.58.11.79-.25.79-.56 0-.28-.01-1.02-.02-2-3.2.69-3.88-1.54-3.88-1.54-.53-1.34-1.3-1.7-1.3-1.7-1.06-.72.08-.71.08-.71 1.18.08 1.8 1.21 1.8 1.21 1.04 1.78 2.72 1.27 3.38.97.11-.76.41-1.27.75-1.56-2.55-.29-5.24-1.28-5.24-5.71 0-1.26.45-2.28 1.19-3.08-.12-.29-.52-1.46.11-3.04 0 0 .97-.31 3.18 1.18a11.07 11.07 0 012.9-.39c.98 0 1.97.13 2.9.39 2.21-1.49 3.18-1.18 3.18-1.18.63 1.58.23 2.75.11 3.04.74.8 1.19 1.82 1.19 3.08 0 4.44-2.7 5.42-5.27 5.7.42.36.8 1.07.8 2.15 0 1.55-.01 2.8-.01 3.18 0 .31.21.68.8.56A10.52 10.52 0 0023.5 12C23.5 5.73 18.27.5 12 .5z"/></svg></span>
-                    <span>GitHub</span>
-                </a>
-                <a href="mailto:vgabriel@uvic.ca" title="Email">
-                    <span class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 4H4a2 2 0 00-2 2v12a2 2 0 002 2h16a2 2 0 002-2V6a2 2 0 00-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg></span>
-                    <span>vgabriel@uvic.ca</span>
-                </a>
+          <h2>Contact</h2>
+          <div class="contact-row">
+            <div>
+              <div class="email">Email: <a href="mailto:vgabriel@uvic.ca">vgabriel@uvic.ca</a></div>
             </div>
-        </section>
-    </div>
 
-    <footer>
+            <div class="social" aria-label="Social links">
+              <a class="s-scholar" href="https://scholar.google.com/citations?user=bM8p3qkAAAAJ&hl=en" title="Google Scholar" target="_blank" rel="noopener noreferrer">
+                <span class="vis">Google Scholar</span>
+                <!-- simplified scholar icon -->
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2L2 7l10 5 10-5-10-5zm0 7.5L4.5 7 12 4.5 19.5 7 12 9.5zM4 9v8l8 4 8-4V9l-8 4-8-4z"/></svg>
+              </a>
+
+              <a class="s-repec" href="https://ideas.repec.org/f/pga290.html#articles" title="Ideas / RePEc" target="_blank" rel="noopener noreferrer">
+                <span class="vis">Ideas / RePEc</span>
+                <!-- RePEc: orange square with 'RePEc' letters (simple text-based mark) -->
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" aria-hidden="true"><rect width="100" height="100" rx="12" fill="currentColor"/><text x="50" y="60" font-family="Helvetica,Arial" font-size="40" font-weight="700" text-anchor="middle" fill="#fff">R</text></svg>
+              </a>
+
+              <a class="s-orcid" href="https://orcid.org/my-orcid?orcid=0000-0001-8659-8661" title="ORCID" target="_blank" rel="noopener noreferrer">
+                <span class="vis">ORCID</span>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2A10 10 0 1022 12 10 10 0 0012 2zm0 3.5a6.5 6.5 0 11-6.5 6.5A6.51 6.51 0 0112 5.5zM9 12a3 3 0 003 3 3 3 0 10-3-3z"/></svg>
+              </a>
+
+              <a class="s-bsky" href="https://bsky.app/profile/vascojgabriel.bsky.social" title="Bluesky" target="_blank" rel="noopener noreferrer">
+                <span class="vis">Bluesky</span>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2C6.5 2 2 6.5 2 12c0 4.1 2.6 7.6 6.3 9.1.5.2.7-.1.7-.5 0-.2 0-.8-.01-1.6-2.6.6-3.1-1.2-3.1-1.2-.4-1.1-1.1-1.4-1.1-1.4-.9-.6.1-.6.1-.6 1 .1 1.6 1.1 1.6 1.1.9 1.5 2.4 1.1 3 .9.1-.6.3-1 .6-1.3-2.1-.2-4.4-1-4.4-4.4 0-1 .3-1.8 1-2.4-.1-.2-.4-1 .1-2.1 0 0 .7-.2 2.3.8A8 8 0 0112 7c.7 0 1.4.1 2 .2 1.6-1.1 2.3-.8 2.3-.8.5 1.1.2 1.9.1 2.1.7.6 1 1.4 1 2.4 0 3.4-2.3 4.1-4.4 4.4.4.3.7.9.7 1.7 0 1.2 0 2.1 0 2.4 0 .3.2.7.7.5A10 10 0 0022 12C22 6.5 17.5 2 12 2z"/></svg>
+              </a>
+
+              <a class="s-linkedin" href="https://www.linkedin.com/in/vasco-j-gabriel-740683b3/" title="LinkedIn" target="_blank" rel="noopener noreferrer">
+                <span class="vis">LinkedIn</span>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M19 3H5a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2V5a2 2 0 00-2-2zM8.5 17H6.2V10.5h2.3V17zM7.3 9.4a1.3 1.3 0 110-2.6 1.3 1.3 0 010 2.6zM18 17h-2.3v-3.3c0-.8-.3-1.4-1.1-1.4-.6 0-1 .4-1.2.9-.1.2-.1.5-.1.8V17H11.1V10.5h2.2v.9c.3-.5.9-1.2 2.1-1.2 1.5 0 2.6 1 2.6 3.1V17z"/></svg>
+              </a>
+
+              <a class="s-github" href="https://github.com/vascojgabriel" title="GitHub" target="_blank" rel="noopener noreferrer">
+                <span class="vis">GitHub</span>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 .5C5.7.5.5 5.7.5 12c0 5.1 3.3 9.4 7.9 10.9.6.1.8-.2.8-.6 0-.3 0-1 0-2-3.2.7-3.9-1.5-3.9-1.5-.5-1.3-1.3-1.7-1.3-1.7-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 .1 2.7 1.3 3.4 1 .1-.7.4-1.2.7-1.5-2.6-.3-5.3-1.3-5.3-5.7 0-1.3.5-2.4 1.2-3.2-.1-.3-.5-1.5.1-3.2 0 0 1-.3 3.2 1.2a11 11 0 016 0c2.2-1.5 3.2-1.2 3.2-1.2.6 1.7.2 3 .1 3.2.7.8 1.2 1.9 1.2 3.2 0 4.4-2.6 5.4-5.3 5.7.4.3.7 1 .7 2 0 1.4 0 2.5 0 2.8 0 .4.2.7.8.6 4.6-1.5 7.9-5.8 7.9-10.9C23.5 5.7 18.3.5 12 .5z"/></svg>
+              </a>
+
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <footer>
         <p>&copy; 2026 Vasco Gabriel. All rights reserved.</p>
-    </footer>
+      </footer>
+    </div>
+  </div>
 </body>
 </html>
